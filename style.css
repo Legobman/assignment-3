@@ -51,6 +51,7 @@ section img, .dishes article img {
     gap: 15px;
     padding: 15px;
     align-items: flex-start;
+    flex: 1;
 }
 
 #sections{
