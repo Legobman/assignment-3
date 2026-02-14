@@ -1,0 +1,75 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color: blue;
+    flex-direction: column;
+}
+
+header, main {
+    text-align: center;
+}
+
+h1, h3, p {
+    color: gold;
+}
+
+aside {
+    width: 20%;
+    padding: 15px;
+    background-color: navy;
+    box-sizing: border-box;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: navy;
+}
+
+section img, .dishes article img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
+
+#content{
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    align-items: flex-start;
+}
+
+#sections{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.dishes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.dishes article {
+    flex: 1 1 30%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: navy;
+}
