@@ -81,6 +81,10 @@ function removefavorites(event){
     // subtract the price of the dish to the running total of the dish
     let price = parseFloat(event.currentTarget.dataset.price);
     total -= price;
+    // fix floating point error to prevent $-0.00 output
+    if(total < 0){
+        total = 0;
+    }
     favoritetotal.textContent = "Current Total: $" + total.toFixed(2);
     
     // turn off the rmeovefavorites event and enable the favorites event
