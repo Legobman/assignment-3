@@ -53,6 +53,9 @@ function favorites(event){
     fitem.textContent = event.currentTarget.dataset.dname;
     favoritelist.appendChild(fitem);
     
+    // store an active list of the favorites
+    event.currentTarget.listitems = fitem;
+
     // add the price of the dish to the running total of the dish
     let price = parseFloat(event.currentTarget.dataset.price);
     total += price;
@@ -70,6 +73,11 @@ function removefavorites(event){
     const fimg = event.currentTarget.parentNode.querySelector("img");
     fimg.classList.remove('selected');
     
+    // remvoe the item from the active list
+    if(event.currentTarget.listitems){
+        event.currentTarget.listitems.remove();
+    }
+
     // subtract the price of the dish to the running total of the dish
     let price = parseFloat(event.currentTarget.dataset.price);
     total -= price;
