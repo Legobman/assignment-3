@@ -74,3 +74,10 @@ section img, .dishes article img {
     box-sizing: border-box;
     background-color: navy;
 }
+
+.selected {
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    border: 5px solid lightblue;
+}
