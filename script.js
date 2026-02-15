@@ -2,8 +2,10 @@
 const dishes = document.querySelectorAll("article");
 const prices = [12.78, 14.60, 17.00, 11.99, 13.99, 14.99, 11.00, 12.50, 6.00]
 const dish_names = ["Crazy Tacos", "Burritos Rancheros", "Texanas", "Where Art Thou Romeo Burger", "Tobacco Road", "Romeo BBQ Bacon Burger", "Sushi Bento Box", "Crazy Roll", "Tempura Bomb"];
+
 // the running total variable
 let total = 0;
+
 // create the favorites list
 const favoritesList = document.querySelector("footer");
 const flist = document.createElement("p");
@@ -11,6 +13,7 @@ flist.style.textAlign = "center";
 flist.textContent = "Favorites:";
 favoritesList.parentNode.insertBefore(flist, favoritesList);
 
+// create the functionality for the buttons
 for(let i = 0; i < dishes.length; i++){
     const price = prices[i];
     const dname = dish_names[i];
@@ -24,6 +27,8 @@ for(let i = 0; i < dishes.length; i++){
     dishes[i].appendChild(tag);
     btn.addEventListener("click", favorites);
 }
+
+// adds the selected dish to the favorites list and adds price to running total
 function favorites(event){
     const fimg = event.currentTarget.parentNode.querySelector("img");
     fimg.classList.add('selected');
